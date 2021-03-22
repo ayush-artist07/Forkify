@@ -21,7 +21,7 @@ const elements={
 const renderLoader=(parent)=>{
     const loader=`<div class="loader">
                     <svg>
-                        <use href="js/img/icons.svg#icon-cw"></use>
+                        <use href="image%2520and%2520icon/icons.svg#icon-cw"></use>
                     </svg>
                 </div>`;
     parent.insertAdjacentHTML('afterBegin',loader);
@@ -93,7 +93,7 @@ const displayButton=(page,type)=>{
               return      `<button class="btn-inline results__btn--${type}" data-goto="${type==='prev'? page-1 : page +1}">
                     <span>Page ${type==='prev'? page-1 : page +1}</span>
                     <svg class="search__icon">
-                        <use href="js/img/icons.svg#icon-triangle-${type==='prev'? 'left':'right'}"></use>
+                        <use href="image%2520and%2520icon/icons.svg#icon-triangle-${type==='prev'? 'left':'right'}"></use>
                     </svg>
                     
                 </button>`
@@ -200,7 +200,7 @@ const formatCount=count=>{
 const createIngredients = ingredient => `
     <li class="recipe__item">
         <svg class="recipe__icon">
-            <use href="js/img/icons.svg#icon-check"></use>
+            <use href="image%2520and%2520icon/icons.svg#icon-check"></use>
         </svg>
         <div class="recipe__count">${formatCount(ingredient.count)}</div>
         <div class="recipe__ingredient">
@@ -223,14 +223,14 @@ const renderResult=(recipe,isLiked)=>{
             <div class="recipe__details">
                 <div class="recipe__info">
                     <svg class="recipe__info-icon">
-                        <use href="js/img/icons.svg#icon-stopwatch"></use>
+                        <use href="image%20and%20icon/icons.svg#icon-stopwatch"></use>
                     </svg>
                     <span class="recipe__info-data recipe__info-data--minutes">${recipe.time}</span>
                     <span class="recipe__info-text"> minutes</span>
                 </div>
                 <div class="recipe__info">
                     <svg class="recipe__info-icon">
-                        <use href="js/img/icons.svg#icon-man"></use>
+                        <use href="image%20and%20icon/icons.svg#icon-man"></use>
                     </svg>
                     <span class="recipe__info-data recipe__info-data--people">${recipe.servings}</span>
                     <span class="recipe__info-text"> servings</span>
@@ -238,12 +238,12 @@ const renderResult=(recipe,isLiked)=>{
                     <div class="recipe__info-buttons">
                         <button class="btn-tiny btn-dec">
                             <svg>
-                                <use href="js/img/icons.svg#icon-circle-with-minus"></use>
+                                <use href="image%20and%20icon/icons.svg#icon-circle-with-minus"></use>
                             </svg>
                         </button>
                         <button class="btn-tiny btn-inc">
                             <svg>
-                                <use href="js/img/icons.svg#icon-circle-with-plus"></use>
+                                <use href="image%20and%20icon/icons.svg#icon-circle-with-plus"></use>
                             </svg>
                         </button>
                     </div>
@@ -251,7 +251,7 @@ const renderResult=(recipe,isLiked)=>{
                 </div>
                 <button class="recipe__love">
                     <svg class="header__likes">
-                        <use href="js/img/icons.svg#icon-heart${isLiked ? '' :'-outlined'}"></use>
+                        <use href="image%20and%20icon/icons.svg#icon-heart${isLiked ? '' :'-outlined'}"></use>
                     </svg>
                 </button>
             </div>
@@ -263,7 +263,7 @@ const renderResult=(recipe,isLiked)=>{
 
                 <button class="btn-small recipe__btn recipe__btn-add">
                     <svg class="search__icon">
-                        <use href="js/img/icons.svg#icon-shopping-cart"></use>
+                        <use href="image%20and%20icon/icons.svg#icon-shopping-cart"></use>
                     </svg>
                     <span>Add to shopping list</span>
                 </button>
@@ -278,7 +278,7 @@ const renderResult=(recipe,isLiked)=>{
                 <a class="btn-small recipe__btn" href="${recipe.url}" target="_blank">
                     <span>Directions</span>
                     <svg class="search__icon">
-                        <use href="js/img/icons.svg#icon-triangle-right"></use>
+                        <use href="image%20and%20icon/icons.svg#icon-triangle-right"></use>
                     </svg>
 
                 </a>
@@ -314,7 +314,7 @@ const renderItem=item=>{
                     <p class="shopping__description">${item.ingredient}</p>
                     <button class="shopping__delete btn-tiny">
                         <svg>
-                            <use href="js/img/icons.svg#icon-circle-with-cross"></use>
+                            <use href="image%2520and%2520icon/icons.svg#icon-circle-with-cross"></use>
                         </svg>
                     </button>
                 </li>`
@@ -333,7 +333,7 @@ const deleteItem=id=>{
 const toggleLikes=isLiked=>{
     
     const iconString=isLiked ? `icon-heart` :`icon-heart-outlined`;
-    document.querySelector(`.recipe__love use`).setAttribute(`href`,`js/img/icons.svg#${iconString}`);
+    document.querySelector(`.recipe__love use`).setAttribute(`href`,`image%2520and%2520icon/icons.svg#${iconString}`);
 };
 
 const toogleLikeMenu=numofLikes=>{
